@@ -1,26 +1,17 @@
+#social-sidebar {
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-
-@media (max-width: 767px) {
-    #social-sidebar {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    #social-sidebar {
-        right: 0;
-        position: fixed;
-        top: 0; 
-        height: 100vh; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        list-style: none; 
-        padding: 0;
-        margin: 0;
-
-        li {
-        list-style: none; 
+    li {
+        list-style: none;
     }
 
     li:first-child a {
@@ -107,5 +98,4 @@
         .social-color(#6BB130);
     }
 
-    }
 }
