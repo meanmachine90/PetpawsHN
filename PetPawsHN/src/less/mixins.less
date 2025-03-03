@@ -1,0 +1,10 @@
+.font-style(@font, @size, @weight: normal, @line-height: 1.5) {
+    font-family: @font;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @line-height;
+  }
+  
+  .heading(@size) {
+    .font-style(@font-headers, @size, bold);
+  }
