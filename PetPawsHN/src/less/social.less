@@ -1,0 +1,111 @@
+
+
+@media (max-width: 767px) {
+    #social-sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #social-sidebar {
+        right: 0;
+        position: fixed;
+        top: 0; 
+        height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+
+        li {
+        list-style: none; 
+    }
+
+    li:first-child a {
+        border-top-right-radius: 5px;
+    }
+
+    li:last-child a {
+        border-bottom-right-radius: 5px;
+    }
+
+    a {
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        height: 50px;
+        width: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover span {
+            left: 120%;
+            opacity: 1;
+        }
+
+        span {
+            font: 12px "Open Sans", sans-serif;
+            text-transform: uppercase;
+            border-radius: 3px;
+            line-height: 24px;
+            left: -100%;
+            margin-top: -16px;
+            opacity: 0;
+            padding: 4px 8px;
+            position: absolute;
+            transition: opacity 0.3s, left 0.4s;
+            top: 50%;
+            z-index: -1;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 8px;
+                width: 8px;
+                left: -4px;
+                margin-top: -4px;
+                position: absolute;
+                top: 50%;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+
+
+    a[class*="twitter"] {
+        .social-color(#00aced);
+    }
+
+    a[class*="facebook"] {
+        .social-color(#3B5998);
+    }
+
+    a[class*="gplus"] {
+        .social-color(#E34429);
+    }
+
+    a[class*="dribbble"] {
+        .social-color(#ea4c89);
+    }
+
+    a[class*="dropbox"] {
+        .social-color(#8DC5F2);
+    }
+
+    a[class*="github"] {
+        .social-color(#9C7A5B);
+    }
+
+    a[class*="evernote"] {
+        .social-color(#6BB130);
+    }
+
+    }
+}
