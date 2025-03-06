@@ -7,7 +7,6 @@
 @input-height: 54px;
 @font-size: 14px;
 
-
 // Section Form
 .section_form {
   display: flex;
@@ -34,8 +33,9 @@
     color: @color-input-text; // Uso de variable
   }
 
-  input {
+  input, textarea {
     height: @input-height;
+    width: 100%;
     border-radius: @border-radius;
     background: @primary-text-color;
     margin-bottom: 15px;
@@ -55,6 +55,11 @@
       outline: none;
       border-color: @secondary-color; // Se ilumina al enfocar
     }
+  }
+
+  textarea{
+    height: 150px;
+    resize: vertical;
   }
 
   // Estilos de Switch (Toggle) 
