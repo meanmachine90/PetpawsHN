@@ -8,7 +8,132 @@
     <title>Pet Paws HN</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">PetPawsHN</a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Galeria</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Mision y Vision</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Adopciones</a></li>
+        </ul>
+        <button class="navbar-toggler" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main>
+      <section id="pets">
+        <div class="cards-container">
+          <div class="card">
+            <div class="card__image">
+              <img src="" alt="Imagen de Perrito">
+            </div>
+            <div class="card__content">
+              <span class="title">Polito</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="" alt="Imagen de Perrito 2">
+            </div>
+            <div class="card__content">
+              <span class="title">Title card</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="" alt="Imagen de Perrito 3">
+            </div>
+            <div class="card__content">
+              <span class="title">Title card</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="" alt="Imagen de Perrito 4">
+            </div>
+            <div class="card__content">
+              <span class="title">Title card</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.</p>
+            </div>
+          </div>  
+        </div>
+      </section>
+  
+      <section class="section_form">
+        <form id="adoption-form" class="feed-form" action="#" method="POST">
+          <h2>Formulario de Adopción</h2>
+          
+          <!-- Campos con placeholders -->
+          <input id="full-name" name="full-name" required placeholder="Nombre Completo" type="text">
+          <input id="address" name="address" required placeholder="Dirección" type="text">
+          <input id="phone" name="phone" required placeholder="Número Telefónico" type="tel">
+          <input id="dni" name="dni" required placeholder="Número de Identificación" type="text">
+          <input id="job" name="job" required placeholder="Ocupación" type="text">
+          <input id="email" name="email" required placeholder="Correo Electrónico" type="email">
+          
+          <!-- Checkbox Preguntas Si/No -->
+          <div class="form-group">
+            <p>¿Todas las personas en el hogar están de acuerdo con tener una mascota?</p>
+            <label class="switch">
+              <input id="agreement" type="checkbox" class="toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <p>¿Has tenido o tienes mascotas actualmente?</p>
+            <label class="switch">
+              <input id="pets" type="checkbox" class="toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p>¿Conoces los términos: esterilización y castración en mascotas?</p>
+            <label class="switch">
+              <input type="checkbox" class="toggle" id="pets" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p>¿Has investigado o leído acerca de los cuidados y recomendaciones para tener una mascota?</p>
+            <label class="switch">
+              <input type="checkbox" class="toggle" id="pets" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p>¿Alguna de las personas dentro del hogar sufre de ataques de ira o alguna enfermedad que desencadene algún tipo de violencia?</p>
+            <label class="switch">
+              <input type="checkbox" class="toggle" id="pets" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <!-- Boton de Enviar -->
+          <button type="submit" class="button_submit">Adoptar</button>
+        </form>
+      </section>
+    </main>
+  
+    <footer>
+      <p>PetPawsHN &copy; Todos los Derechos Reservados 2025</p>
+    </footer>
+    <script>
+      document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        document.querySelector('.navbar').classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

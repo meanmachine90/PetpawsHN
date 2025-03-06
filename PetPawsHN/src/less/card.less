@@ -1,0 +1,82 @@
+@color-image-start: @default-background;
+@color-image-end: @secondary-color;
+@transition-speed: 0.5s;
+@border-radius-hover: 35px;
+@border-radius-image-hover: 25px;
+@price-size: 75px;
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 80px;
+    padding: 16px;
+    justify-content: center;
+  }
+
+.card {
+  width: 300px;
+  height: 360px;
+  background: @primary-text-color;
+  color: @text-color;
+  font-weight: 600;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  transition: all @transition-speed ease;
+
+  &::before {
+    content: "¡Adopta!";
+    position: absolute;
+    width: @price-size;
+    height: @price-size;
+    top: 35%;
+    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: @primary-color;
+    color: @primary-text-color;
+    font-weight: 800;
+    transition: all @transition-speed ease;
+  }
+
+  &__image {
+    width: initial;
+    height: 300px;
+    // background: url(https://picsum.photos/id/837/400/400);
+    background: linear-gradient(163deg, @color-image-start 18%, @color-image-end 79%);
+    transition: all @transition-speed ease;
+  }
+
+  &:hover {
+    border-top-left-radius: @border-radius-hover;
+    box-shadow: 5px 5px 0px 0px @color-image-end,
+                10px 10px 0px 0px @default-background,
+                15px 15px 0px 0px @secondary-color,
+                5px 5px 15px 5px rgba(0,0,0,0);
+
+    .card__image {
+      border-top-left-radius: @border-radius-image-hover;
+    }
+
+    &::before {
+      transform: scale(1.3) rotate(-30deg);
+    }
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.4em;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px;
+}
